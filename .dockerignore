@@ -1,0 +1,10 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+venv/
+*.egg-info/
+.env
+.git
+*.sqlite
+qr_codes/
