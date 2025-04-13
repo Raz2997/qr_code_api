@@ -48,15 +48,15 @@ jobs:
           context: .
           push: true
           tags: |
-            Raz2997/qr_code_api:${{ github.sha }}
-            Raz2997/qr_code_api:latest
+            raz2997/qr_code_api:${{ github.sha }}
+            raz2997/qr_code_api:latest
           platforms: linux/amd64
-          cache-from: type=registry,ref=Raz2997/qr_code_api:cache
+          cache-from: type=registry,ref=raz2997/qr_code_api:cache
           cache-to: type=inline
       - name: Scan the Docker image
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: 'Raz2997/qr_code_api:${{ github.sha }}'
+          image-ref: 'raz2997/qr_code_api:${{ github.sha }}'
           format: 'table'
           exit-code: '0'  # Advisory only
           ignore-unfixed: true
